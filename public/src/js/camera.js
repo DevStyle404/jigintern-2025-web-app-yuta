@@ -15,5 +15,6 @@ function startCamera() {
         })
         .catch((error) => {
             console.error("カメラの起動に失敗しました:", error);
+            alert(error.message);
         });
 }
