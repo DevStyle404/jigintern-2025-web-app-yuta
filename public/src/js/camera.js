@@ -8,7 +8,7 @@ function startCamera() {
     const userVideo = document.getElementById("userVideo");
 
     // カメラの映像を取得
-    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+    Navigator.mediaDevices.getUserMedia({ video: true, audio: false })
         .then((stream) => {
             userVideo.srcObject = stream; // 映像を video タグに表示
             userVideo.play();
