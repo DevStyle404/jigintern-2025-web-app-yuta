@@ -11,6 +11,7 @@ function startCamera() {
     navigator.mediaDevices.getUserMedia({ video: true, audio: false })
         .then((stream) => {
             userVideo.srcObject = stream; // 映像を video タグに表示
+            userVideo.play();
         })
         .catch((error) => {
             console.error("カメラの起動に失敗しました:", error);
