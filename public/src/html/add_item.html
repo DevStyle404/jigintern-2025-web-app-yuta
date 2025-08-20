@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/add_item.css">
+</head>
+
+<body>
+    <header>
+        <h1>持ち物を追加</h1>
+    </header>
+    <h2>手動で追加</h2>
+    <form action="add_item.html" method="post">
+        <label for="item">アイテム名:</label>
+        <input type="text" id="item" name="item" required>
+        <button type="submit">追加</button>
+    </form>
+    <br>
+    <h2>カメラで追加</h2>
+    <form action="add_item.html" method="post">
+        <a href="camera.html" class="camera">カメラを起動</a>
+    </form>
+    <a href="add_list.html" class="back">戻る</a>
+</body>
+
+</html>
