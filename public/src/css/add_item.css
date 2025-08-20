@@ -1,0 +1,100 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* セクションタイトルのスタイル */
+h2 {
+    color: #4CAF50;
+    margin: 20px 0 10px;
+    padding-left: 10px;
+    border-left: 4px solid #4CAF50;
+}
+
+/* フォームのスタイル */
+form {
+    margin: 20px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ラベルと入力フィールドのスタイル */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ボタンのスタイル */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* カメラリンクのスタイル */
+a.camera {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+a.camera:hover {
+    background-color: #0056b3;
+}
+
+/* 戻るリンクのスタイル */
+a.back {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+a.back:hover {
+    text-decoration: underline;
+}

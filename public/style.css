@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
 h1 {
     font-size: 2em;
     margin-bottom: 0.5em;
@@ -26,4 +32,22 @@ a.camera {
 
 a.camera:hover {
     background-color: #0056b3;
+}
+
+div.addList {
+    text-align: center;
+    margin-top: 2em;
+}
+
+a.add {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a.add:hover {
+    background-color: #218838;
 }

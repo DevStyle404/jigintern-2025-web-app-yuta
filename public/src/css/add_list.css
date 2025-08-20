@@ -1,0 +1,52 @@
+/* リセットCSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* 見出しのスタイル */
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+/* 持ち物追加ボタンのスタイル */
+a.addItem {
+    display: block;
+    margin: 1em auto;
+    padding: 1em 2em;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a.addItem:hover {
+    background-color: #218838;
+}
+
+/* 完了ボタン */
+a.complete {
+    display: block;
+    margin: 1em auto;
+    padding: 1em 2em;
+    background-color: #17a2b8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a.complete:hover {
+    background-color: #138496;
+}
