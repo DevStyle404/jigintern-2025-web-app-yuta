@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>プリセットを編集</title>
     <link rel="stylesheet" href="../css/edit_list.css">
+    <script src="../js/edit_list.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>プリセットを編集</h1>
     </header>
+
+    <form id = "presetSelector">
+        <label for="daySelect">曜日を選択</label>
+        <select name="day" id="daySelect">
+            <option value="monday">月曜日</option>
+            <option value="tuesday">火曜日</option>
+            <option value="wednesday">水曜日</option>
+            <option value="thursday">木曜日</option>
+            <option value="friday">金曜日</option>
+        </select>
+    </form>
+
     <div class="displayList">
     <!--リストを表示-->
     </div>
