@@ -59,3 +59,18 @@ function displayCheckList(day) {
     });
 }
 
+// 完了ボタンを押したときの処理
+function handleComplete(day) {
+    const historyKey = `${day}_history`;
+    const currentDate = getCurrentDate();
+    const savedDateKey = `${day}_lastSavedDate`;
+
+    // 現在のチェック状態の保存
+    const checkboxes = document.querySelectorAll(".check-item input[type='checkbox']");
+    const history = Array.from(checkboxes).map(checkbox => checkbox.checked);
+    localStorage.setItem(historyKey, JSON.stringify(history));
+    localStorage.setItem(savedDateKey, currentDate);
+
+    alert("チェックリストを保存しました！");
+}
+
