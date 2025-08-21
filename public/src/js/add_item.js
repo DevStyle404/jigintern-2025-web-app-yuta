@@ -125,9 +125,9 @@ globalThis.onChange = function (event) {
         return;
     }
 
-    // 画像サイズ制限(1MB)
-    if (file.size > 1024 * 1024) {
-        alert("画像サイズは1MB以下にしてください");
+    // 画像サイズ制限(5MB)
+    if (file.size > 5 * 1024 * 1024) {
+        alert("画像サイズは5MB以下にしてください");
         return;
     }
 
@@ -160,7 +160,7 @@ globalThis.onChange = function (event) {
             const ctx = canvas.getContext("2d");
             ctx.drawImage(img, 0, 0, width, height);
 
-            // 圧縮率0.7でJPEGに変換
+            // 圧縮率0.8でJPEGに変換
             canvas.toBlob((blob) => {
                 if (!blob) {
                     alert("画像の変換に失敗しました");
@@ -172,7 +172,7 @@ globalThis.onChange = function (event) {
                 previewImage.src = URL.createObjectURL(blob);
                 previewImage.style.display = "block";
                 uploadButton.style.display = "inline-block";
-            }, "image/jpeg", 0.7);
+            }, "image/jpeg", 0.8);
         };
         img.src = reader.result;
     };
