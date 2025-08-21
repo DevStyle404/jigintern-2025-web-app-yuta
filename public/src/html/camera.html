@@ -1,3 +1,4 @@
+<!--削除予定-->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,8 +10,13 @@
 </head>
 
 <body>
-    <video id="userVideo" autoplay></video>
+    <input id="uploadImage" type="file" accept="image/*" capture="camera" onChange="onChange(event)">
+    <div id="preview">
+        <img id="previewImage" style="max-width: 100%; max-height: 400px; display: none;" alt="撮影した写真">
+    </div>
+    <button id="uploadButton" style="display: none;">アップロード</button>
 
     <script src="../js/camera.js"></script>
 </body>
+
 </html>
