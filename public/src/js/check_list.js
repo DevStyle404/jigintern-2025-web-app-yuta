@@ -74,3 +74,17 @@ function handleComplete(day) {
     alert("チェックリストを保存しました！");
 }
 
+// DOMツリーが完全に読み込まれた後にイベントリスナーを設定
+document.addEventListener("DOMContentLoaded", () => {
+    const day = getDayFromQuery();
+
+    if (day) {
+        displayCheckList(day);
+
+        // 完了ボタンのクリック時
+        const completeButton = document.getElementById("completeButton");
+        completeButton.addEventListener("click", () => handleComplete(day));
+    } else {
+        alert("曜日情報が見つかりませんでした");
+    }
+});
