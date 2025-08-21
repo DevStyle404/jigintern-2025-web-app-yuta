@@ -1,6 +1,13 @@
+let selectedFile = null;
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("addItemForm");
     const itemInput = document.getElementById("item");
+    const uploadButton = document.getElementById("uploadButton");
+    const modal = document.getElementById("modal");
+    const detectedItemsList = document.getElementById("detectedItemsList");
+    const confirmButton = document.getElementById("confirmButton");
+    const cancelButton = document.getElementById("cancelButton");
 
     // フォーム送信時の処理
     form.addEventListener("submit", (event) => {
