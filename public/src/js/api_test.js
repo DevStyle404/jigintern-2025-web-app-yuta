@@ -1,7 +1,8 @@
+// 選択したファイル
 let selectedFile = null;
 
 // 画像選択時の処理
-globalThis.onChange = function(event) {
+globalThis.onChange = function (event) {
     const file = event.target.files[0];
     const previewImage = document.getElementById("previewImage");
     const uploadButton = document.getElementById("uploadButton");
