@@ -46,3 +46,19 @@ function displayItems(day) {
         });
     });
 }
+
+// 曜日が変更されたとき
+function handleDayChange(newDay) {
+    if (isEdited) {
+        const confirmChange = confirm("編集内容が保存されていません．変更内容を破棄してもよろしいですか？")
+        if (!confirmChange) {
+            // 現在の曜日に留まる
+            document.getElementById("daySelect").value = currentDay;
+            return;
+        }
+    }
+
+    currentDay = newDay; // 現在の曜日を更新
+    isEdited = false; // 編集状態をリセット
+    displayItems(currentDay); // 新しい曜日の持ち物リストを表示
+}
