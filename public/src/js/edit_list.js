@@ -13,3 +13,8 @@ function getDayFromQuery() {
 function getItemsForDay(day) {
     return JSON.parse(localStorage.getItem(day)) || [];
 }
+
+// localStorageに持ち物リストを保存
+function saveItemsForDay(day, items) {
+    localStorage.setItem(day, JSON.stringify(items));
+}
