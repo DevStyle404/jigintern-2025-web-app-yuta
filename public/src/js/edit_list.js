@@ -8,3 +8,8 @@ function getDayFromQuery() {
     const params = new URLSearchParams(window.location.search);
     return params.get("day") || "monday";
 }
+
+// localStorageから持ち物リストを取得
+function getItemsForDay(day) {
+    return JSON.parse(localStorage.getItem(day)) || [];
+}
