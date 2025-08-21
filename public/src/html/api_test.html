@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像を用いたAPIテスト</title>
+</head>
+
+<body>
+    <h1>画像を用いたAPIテスト</h1>
+
+    <!--カメラからの画像取得-->
+    <input type="file" id="upload" accept="image/*" capture="camera" onchange="onChange(event)">
+
+    <!--プレビュー表示-->
+    <div id="preview">
+        <img id="previewImage" src="" alt="Image Preview" style="max-width: 100%; height: auto; display: none;">
+    </div>
+
+    <!--アップロードボタン-->
+    <button id="uploadButton" style="display: none;">アップロード</button>
+
+    <!--サーバーからのレスポンス-->
+    <div id="response">
+        <p id="responseText"></p>
+    </div>
+
+    <script src="../js/api_test.js"></script>
+</body>
+
+</html>
