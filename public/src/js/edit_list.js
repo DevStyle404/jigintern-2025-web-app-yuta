@@ -61,6 +61,14 @@ function handleDayChange(newDay) {
     currentDay = newDay; // 現在の曜日を更新
     isEdited = false; // 編集状態をリセット
     displayItems(currentDay); // 新しい曜日の持ち物リストを表示
+
+    // 「持ち物を追加」リンクの更新
+    updateAddItemLink(currentDay);
+}
+
+function updateAddItemLink(day) {
+    const addItemLink = document.getElementById("addItemLink");
+    addItemLink.href = `add_item.html?day=${day}`;
 }
 
 // DOMが読み込まれたときの処理
@@ -71,6 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
     currentDay = getDayFromQuery();
     daySelect.value = currentDay;
     displayItems(currentDay);
+
+    updateAddItemLink(currentDay);
 
     // 曜日選択の変更イベント
     daySelect.addEventListener("change", (event) => {
