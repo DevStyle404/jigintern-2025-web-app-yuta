@@ -62,3 +62,18 @@ function handleDayChange(newDay) {
     isEdited = false; // 編集状態をリセット
     displayItems(currentDay); // 新しい曜日の持ち物リストを表示
 }
+
+// DOMが読み込まれたときの処理
+document.addEventListener("DOMContentLoaded", () => {
+    const daySelect = document.getElementById("daySelect");
+
+    // 初期表示
+    currentDay = getDayFromQuery();
+    daySelect.value = currentDay;
+    displayItems(currentDay);
+
+    // 曜日選択の変更イベント
+    daySelect.addEventListener("change", (event) => {
+        handleDayChange(event.target.value);
+    });
+});
