@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>持ち物を追加</title>
     <link rel="stylesheet" href="../css/add_item.css">
+    <script src="../js/add_item.js"></script>
 </head>
 
 <body>
@@ -27,9 +28,19 @@
         <div id="preview">
             <img id="previewImage" style="max-width: 100%; max-height: 400px; display: none;" alt="撮影した写真">
         </div>
-        <button id="uploadButton" style="display: none;">追加</button>
-        <script src="../js/add_item.js"></script>
+        <button id="uploadButton" style="display: none;">アップロード</button>
     </div>
+
+    <!-- リスト追加確認用モーダルウィンドウ -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>認識されたアイテム</h2>
+            <ul id="detectedItemsList"></ul>
+            <button id="confirmButton">確定</button>
+            <button id="cancelButton">キャンセル</button>
+        </div>
+    </div>
+
     <a href="edit_list.html" class="back">戻る</a>
 </body>
 
