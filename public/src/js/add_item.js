@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // 現在の曜日を取得
-        const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(globalThis.location.search);
         const currentDay = params.get("day") || "monday";
 
         // ローカルストレージに保存
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // 現在の曜日を取得
-        const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(globalThis.location.search);
         const currentDay = params.get("day") || "monday";
 
         // ローカルストレージに保存
