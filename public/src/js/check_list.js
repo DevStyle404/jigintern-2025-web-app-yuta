@@ -1,6 +1,6 @@
 // クエリパラメータから曜日情報を取得
 function getDayFromQuery() {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(globalThis.location.search);
     return params.get("day");
 }
 
