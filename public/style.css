@@ -16,24 +16,6 @@ h1 {
     text-align: center;
 }
 
-div.camera {
-    text-align: center;
-    margin-top: 2em;
-}
-
-a.camera {
-    display: inline-block;
-    padding: 1em 2em;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-a.camera:hover {
-    background-color: #0056b3;
-}
-
 div.addList {
     text-align: center;
     margin-top: 2em;
