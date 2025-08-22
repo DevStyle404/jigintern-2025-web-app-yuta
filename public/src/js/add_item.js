@@ -125,9 +125,9 @@ globalThis.onChange = function (event) {
         return;
     }
 
-    // 画像サイズ制限(5MB)
-    if (file.size > 5 * 1024 * 1024) {
-        alert("画像サイズは5MB以下にしてください");
+    // 画像サイズ制限(20MB)
+    if (file.size > 20 * 1024 * 1024) {
+        alert("画像サイズは20MB以下にしてください");
         return;
     }
 
