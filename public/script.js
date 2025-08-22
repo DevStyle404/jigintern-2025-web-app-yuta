@@ -7,6 +7,15 @@ const initialPresets = {
     "friday": ["スケッチブック", "カラーペン"]
 };
 
+// 曜日を日本語に変換するマッピング
+const dayTranslations = {
+    "monday": "月曜日",
+    "tuesday": "火曜日",
+    "wednesday": "水曜日",
+    "thursday": "木曜日",
+    "friday": "金曜日"
+};
+
 // 初期データをlocalStorageに保存
 function setInitialPresets() {
     for (const [day, items] of Object.entries(initialPresets)) {
@@ -31,8 +40,10 @@ function displayPresets() {
         //現在の曜日をハイライト
         const isToday = day === currentDay ? "highlight" : "";
 
+        const dayInJapanese = dayTranslations[day];
+
         dayDiv.innerHTML = `
-            <button class="select-button ${isToday}" data-day="${day}">${day}</button>
+            <button class="select-button ${isToday}" data-day="${day}">${dayInJapanese}</button>
         `;
         selectListDiv.appendChild(dayDiv);
     }
