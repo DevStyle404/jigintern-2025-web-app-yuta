@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* チェックリスト */
+.checkList {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkList h2 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.checkList .item {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.checkList .item:hover {
+    background-color: #e8f5e9;
+}
+
+.checkList .item label {
+    font-size: 1.2rem;
+    color: #333;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+/* チェックボックス */
+.checkList .item input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: #4CAF50;
+}
+
+/* 完了ボタン */
+#completeButton {
+    display: block;
+    font-size: 1.2rem;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 300px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#completeButton:hover {
+    background-color: #45a049;
+}
+
+/* 戻るボタン */
+#backButton {
+    display: block;
+    font-size: 1.2rem;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 300px;
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#backButton:hover {
+    background-color: #1976D2;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .checkList {
+        padding: 10px;
+    }
+
+    .checkList .item label {
+        font-size: 1rem;
+    }
+
+    #completeButton,
+    #backButton {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
