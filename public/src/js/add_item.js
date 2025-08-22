@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             // モーダルを表示
-            modal.style.display = "block";
+            modal.style.display = "flex";
         } catch (error) {
             console.error(error);
             alert("画像のアップロード中にエラーが発生しました");
