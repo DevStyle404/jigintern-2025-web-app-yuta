@@ -93,7 +93,7 @@ form#presetSelector select:hover {
 .displayList .item span {
     font-size: 1.2rem;
     color: #333;
-    flow-grow: 1;
+    flex-grow: 1;
     margin-left: 10px;
 }
 
