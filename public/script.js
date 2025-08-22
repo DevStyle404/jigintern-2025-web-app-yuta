@@ -19,7 +19,13 @@ const dayTranslations = {
 // 初期データをlocalStorageに保存
 function setInitialPresets() {
     for (const [day, items] of Object.entries(initialPresets)) {
-        if (!localStorage.getItem(day)) {
+        try {
+            const storedItems = JSON.parse
+            if (!Array.isArray(storedItems)) {
+                throw new Error(`Invalid data format for ${day}`);
+            }
+        } catch (_error) {
+            console.warn(`初期化: ${day}のデータが不正だったためリセットしました`);
             localStorage.setItem(day, JSON.stringify(items));
         }
     }
@@ -53,7 +59,7 @@ function displayPresets() {
         button.addEventListener("click", (event) => {
             const day = event.target.getAttribute("data-day");
             // 曜日情報をクエリパラメータとして渡す
-            window.location.href = `src/html/check_list.html?day=${day}`;
+            globalThis.location.href = `src/html/check_list.html?day=${day}`;
         })
     })
 }
