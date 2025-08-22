@@ -19,13 +19,7 @@ const dayTranslations = {
 // 初期データをlocalStorageに保存
 function setInitialPresets() {
     for (const [day, items] of Object.entries(initialPresets)) {
-        try {
-            const storedItems = JSON.parse
-            if (!Array.isArray(storedItems)) {
-                throw new Error(`Invalid data format for ${day}`);
-            }
-        } catch (_error) {
-            console.warn(`初期化: ${day}のデータが不正だったためリセットしました`);
+        if (!localStorage.getItem(day)) {
             localStorage.setItem(day, JSON.stringify(items));
         }
     }
